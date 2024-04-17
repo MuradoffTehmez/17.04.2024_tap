@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.button.error {
+  background-color: #f44336;
+}
+
+.notification {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  position: fixed;
+  top: 100%;
+  right: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, background-color 1s ease, width 0.3s ease-in-out, height 0.3s ease-in-out;
+  transform: translateY(-100%);
+  margin-bottom: 10px;
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notification.show.green {
+  background-color: #4CAF50;
+}
+
+.notification.show.yellow {
+  background-color: #FFC107;
+}
+
+.notification.show.red {
+  background-color: #f44336;
+}
+
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.notification__text {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.notification__close {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
